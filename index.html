@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Kasir Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Aplikasi Kasir</h1>
+            <p id="date-time"></p>
+        </header>
+        
+        <!-- Input Barang -->
+        <section class="input-barang">
+            <input type="text" id="item-name" placeholder="Nama Barang" />
+            <input type="number" id="item-price" placeholder="Harga Barang" />
+            <input type="number" id="item-quantity" placeholder="Jumlah" />
+            <button id="add-item">Tambah Barang</button>
+        </section>
+
+        <!-- Daftar Barang yang Dibeli -->
+        <section class="cart">
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Nama Barang</th>
+                        <th>Harga</th>
+                        <th>Jumlah</th>
+                        <th>Total</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Daftar Barang Akan Ditampilkan di sini -->
+                </tbody>
+            </table>
+            <div id="summary">
+                <p><strong>Subtotal: </strong> Rp <span id="subtotal">0</span></p>
+                <p><strong>Total: </strong> Rp <span id="total">0</span></p>
+            </div>
+        </section>
+
+        <!-- Pembayaran -->
+        <section class="payment">
+            <h3>Metode Pembayaran</h3>
+            <input type="number" id="payment-amount" placeholder="Jumlah Pembayaran" />
+            <p><strong>Kembalian: </strong> Rp <span id="change">0</span></p>
+            <button id="complete-payment">Selesaikan Transaksi</button>
+        </section>
+
+        <footer>
+            <button id="print-receipt">Cetak Struk</button>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
